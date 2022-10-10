@@ -1,10 +1,170 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body{
     font-family: sans-serif;
+
 }
 .navbar{
-    background-color: red;
+    background: linear-gradient( to right, black, white);
+    padding: 0 !important;
+}
+
+#nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.column {
+    float: left;
+    width: 33.33%;
+
+}
+
+img{
+    width: 100%;
+    height: auto;
+    padding: 24px 0px 0px 0px !important;
+
+    position: relative;
+}
+img:hover{
+    width: 110%;
+    height: auto;
+    margin: -24px ;
+    transition: 0.5s;
+}
+#logo{
+    padding: 10px;
+    color: white;
+    /*font-size: 3vw;*/
+}
+ #nazov{
+     color: white;
+     font-weight: 600;
+     text-align: center;
+}
+#login{
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1vw ;
+    transition: 0.5s;
+}
+#login:hover{
+    color: orange;
+}
+
+.navbar-nav li{
+    padding: 0 10px;
+}
+.navbar-nav li a{
+    color: white !important;
+    font-weight: 600;
+}
+
+.header{
+    background-color: black;
+
+}
+
+.grid-layout .header {
+    grid-area: header;
+}
+
+.grid-layout .navigation {
+    grid-area: nav;
+}
+
+.grid-layout .ads {
+    grid-area: ads;
+}
+
+.grid-layout .sidebar {
+    grid-area: sidebar;
+}
+
+.grid-layout .main {
+    grid-area: main;
+
+}
+
+.grid-layout .footer {
+    grid-area: footer;
+}
+
+/*.grid-layout > * {*/
+/*    border: 1px solid red;*/
+/*    padding: 5px;*/
+/*}*/
+
+.grid-layout.container {
+
+    display: grid;
+    height: 100vh;
+    gap: 24px;
+
+    /* Creating 6 rows and 3rd row expands as much as it can */
+    grid-template-rows: auto auto 1fr auto auto auto;
+
+    /* Defining the template */
+    grid-template-areas:
+                "header"
+                "nav"
+                "main"
+                "sidebar"
+                "ads"
+                "footer";
+}
+
+
+@media (min-width: 720px) {
+    .grid-layout.container {
+        /* Creating 4 rows and the 3rd row expands as much as it can */
+        grid-template-rows: auto auto 1fr auto;
+
+        /* Defining the template (3 columns) */
+        grid-template-areas:
+                    "header header header"
+                    "nav nav nav"
+                    "sidebar main main"
+                    "ads footer footer";
+    }
+    .column{
+        font-size: 3vw;
+    }
+    #nazov{
+        font-size: 5vw;
+    }
+}
+
+
+@media (min-width: 1020px) {
+    .grid-layout.container {
+        /* Creating 4 rows and the 3rd row expands as much as it can */
+        grid-template-rows: auto auto 1fr auto;
+
+        /* Defining the template (4 columns) */
+        grid-template-areas:
+                        "header header header header"
+                        "sidebar nav nav ads"
+                        "sidebar main main ads"
+                        "footer footer footer footer";
+    }
+    .column{
+        font-size: 2.5vw;
+    }
+    #nazov{
+        font-size: 4vw;
+    }
+}
+@media (min-width: 2000px) {
+    .column{
+        font-size: 1.2vw;
+    }
+    #nazov{
+        font-size: 1.2vw;
+    }
 }
