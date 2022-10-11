@@ -26,8 +26,13 @@ body{
     font-weight: bold;
 
 }
-
-
+.main{
+    position: relative;
+    width: 100%;
+}
+#jako{
+    color: white;
+}
 img{
     width: 100%;
     height: auto;
@@ -52,9 +57,10 @@ img:hover{
      text-align: center;
 }
 #login{
+    text-decoration: none;
     color: white;
     font-weight: 600;
-    text-align: center;
+    text-align: right;
     margin-top: 1vw ;
     transition: 0.5s;
 }
@@ -72,8 +78,13 @@ img:hover{
 .navbar-nav li a{
     color: white !important;
     font-weight: 600;
+    transition: 0.5s;
 }
 
+.navbar-nav li a:hover{
+    color: orange !important;
+    font-weight: 600;
+}
 .header{
     background: linear-gradient( to right, black, white,black);
 }
@@ -100,6 +111,71 @@ img:hover{
 
 }
 
+.prihlasovanie{
+    position: relative;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+}
+.prihlasovanie h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid black;
+}
+.prihlasovanie form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+form .text{
+    position: relative;
+    border-bottom: 2px  solid black;
+    margin: 30px 0;
+}
+.text input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    text-align: center;
+}
+.text label{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: #adadad;
+    transform: translate(-50%);
+    font-size: 18px;
+    pointer-events: none;
+
+}
+
+input[type="submit"]{
+    transition: 0.5s;
+}
+
+input[type="submit"]:hover{
+    transition: 0.5s;
+    color: orange;
+}
+
+.zabudnute{
+    text-align: center;
+}
+
+input[type="submit"]{
+    width: 40%;
+    border: 2px solid   black;
+
+}
+.registracia{
+    text-align: center;
+}
 .grid-layout .header {
     grid-area: header;
 }
@@ -135,6 +211,9 @@ img:hover{
 .end-of-footer{
     color: grey;
 }
+.col-md-3{
+    padding: 2% 10%;
+}
 
 .grid-layout.container {
     width: 100% !important;
@@ -156,7 +235,6 @@ img:hover{
 
 }
 
-
 @media (min-width: 720px) {
     .grid-layout.container {
         /* Creating 4 rows and the 3rd row expands as much as it can */
@@ -169,6 +247,8 @@ img:hover{
                     "sidebar main main"
                     "ads footer footer";
     }
+
+
     .column{
         font-size: 3vw;
     }
